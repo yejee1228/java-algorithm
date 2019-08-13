@@ -1,9 +1,6 @@
-package step1;
-
+package study01;
 import java.util.Scanner;
-
 public class Print5Times {
-
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		while(true) {
@@ -18,11 +15,7 @@ public class Print5Times {
 				break;
 			}
 			System.out.println("안녕");
-			
 			}
-		
-		
-
 	}
 
 }
