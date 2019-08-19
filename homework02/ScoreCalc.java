@@ -27,25 +27,41 @@ public class ScoreCalc {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("합계와 평균 계산기");
-		int plus = 0;
 		int sum = 0;
-		String seq = "";
 		int aval = 0;
+		int a = 0;
+		int[] num = new int[300];
+		int plus = 0;
+		int count =0;
+		String dap = "";
+		while(true) {
 		System.out.println("더하려는 숫자를 입력하세요(종료는 -1)");
-		plus = scan.nextInt();
-		for(int i = 1 ; i>0 ; i++) {
-			switch(plus) {
-			case -1 : seq += "=" + sum;
-				System.out.println(String.format("현재까지의 누적값은 %s이고, 평균은  %d 입니다.(소수점 이하는 절삭)", seq, aval));
-				return;
-			default :
-				sum += plus;
-				seq += plus + "+";
-				aval = sum / i;
-				System.out.println("더하려는 숫자를 입력하세요(종료는 -1)");
-				plus = scan.nextInt();
+		plus= scan.nextInt();
+		
+			if(plus == -1) {
+				dap = "=";
 				break;
+			}else {			
+				num [a] = plus;
+				sum += plus;
+				
+				
 			}
+			count ++;
+			a++;
 		}
-	    }
+		aval = sum / count;
+		System.out.print("현재까지의 누적값은 "+ num[0]);
+		
+		
+		for (int i = 1; i<count; i++) {
+			System.out.print("+");
+			System.out.print(num[i]);
+						
+		}
+		
+		
+		System.out.printf("%s%d이고, 평균은 %d입니다.", dap, sum, aval);	
+
+	}
 }

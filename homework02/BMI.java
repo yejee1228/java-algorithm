@@ -31,24 +31,19 @@ public class BMI {
 		double weight = scan.nextDouble();
 		double bmi = weight / (length * length);
 		double bmi3 = Math.round(bmi * 100) / 100.0;
-				
+		String eval = "";
 		if (bmi > 30.0) {
-			System.out.printf("당신의 BMI 지수는 "+ bmi3+ "입니다.");
-			System.out.println("당신은 고도비만입니다.");
+			eval = "고도비만";
 		}else if (bmi > 25.0) {
-			System.out.printf("당신의 BMI 지수는 "+ bmi3 + "입니다.");
-			System.out.println("당신은 비만입니다.");
+			eval = "경도비만";
 		}else if (bmi > 23.0) {
-			System.out.printf("당신의 BMI 지수는 "+ bmi3 + "입니다.");
-			System.out.println("당신은 과체중입니다.");
+			eval = "과체중";
 		}else if (bmi > 18.5) {
-			System.out.printf("당신의 BMI 지수는 "+ bmi3 + "입니다.");
-			System.out.println("당신은 정상입니다.");
+			eval = "정상";
 		}else {
-			System.out.printf("당신의 BMI 지수는 "+ bmi3 + "입니다.");
-			System.out.println("당신은 저체중입니다.");
+			eval = "저체중";
 		}
-			
+		System.out.printf("당신의 BMI 지수는 %.1f입니다.\n당신은 %s입니다.", bmi3, eval);	
 	}
 
 }
