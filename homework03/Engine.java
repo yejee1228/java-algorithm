@@ -34,14 +34,16 @@ public class Engine {
 		case 3 :
 			System.out.println("얼마에요?");
 			int cost = scanner.nextInt();
-			System.out.println(String.format("%d원 입니다", cost));
+			result = student.getCost(cost);
+			System.out.println(result);
 			System.out.println("몇개 드릴까요?");
 			int num = scanner.nextInt();
-			System.out.println(String.format("%d개 주세요", num));
+			result = student.getNum(num);
+			System.out.println(result);
 			int won = cost*num;
 			System.out.println(String.format("%d원입니다", won));
 			System.out.println("비싸요, 10% 깎아주세요.");
-			result = student.howMuch(cost, num, won);
+			result = student.howMuch(won);
 			System.out.println(result);
 			break;
 		case 4 : 

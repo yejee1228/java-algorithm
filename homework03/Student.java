@@ -1,6 +1,5 @@
 package homework03;
 
-import java.util.Scanner;
 
 public class Student {
 	
@@ -33,9 +32,17 @@ public class Student {
 		String result = String.format("당신의 BMI 지수는 %.1f입니다.\n당신은 %s입니다.", bmi3, eval);
 		return result;
 	}
-	
+	public String getCost(int cost) {
+		String result = String.format("%d원 입니다", cost);
+		return result;
+	}
+	public String getNum(int num) {
+		String result = String.format("%d개 주세요", num);
+		return result;
+	}
 
-	public String howMuch(int cost, int num, int won) {
+	public String howMuch(int won) {
+		
 		int dc = won / 10;
 		won = won - dc;
 		String result = String.format("그럼 %d원만 주세요.", won);

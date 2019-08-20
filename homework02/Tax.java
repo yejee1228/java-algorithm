@@ -21,9 +21,9 @@ public class Tax {
 		String name = scanner.next();
 		System.out.println("연봉을 입력하세요(만원)");
 		int income = scanner.nextInt();
-		double tax = 0;
-		tax = (int)Math.round(income * rate);
-		System.out.printf("연봉 " + income + "만원을 받으시는 "+name + "님께서 납부할 세금은 " + tax +"만원 입니다.");
+		double tax = 0.0;
+		tax = Math.round(income * rate);
+		System.out.printf("연봉 %d만원을 받으시는 %s님께서 납부할 세금은 %.1f만원 입니다.", income, name, tax);
 
 	}
 	
