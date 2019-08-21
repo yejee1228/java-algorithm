@@ -35,7 +35,7 @@ public class BMI {
 		if (bmi > 30.0) {
 			eval = "고도비만";
 		}else if (bmi > 25.0) {
-			eval = "경도비만";
+			eval = "비만";
 		}else if (bmi > 23.0) {
 			eval = "과체중";
 		}else if (bmi > 18.5) {
